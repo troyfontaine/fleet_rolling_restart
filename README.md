@@ -26,7 +26,20 @@ A recent version of go (1.4 or higher) is required, so if your distribution's pa
 To install fleetctl, the tutorial [here](https://leoengine.org/fleetctl-on-ubuntudebian-system/) should give you all you need.
 
 ## Usage
-Coming soon  
+To restart all services:  
+```
+./fleet_restart.sh all
+```  
+
+To restart one service:  
+```
+./fleet_restart.sh web_service
+```  
+
+To restart a few select services pass them as a space separated list:  
+```
+./fleet_restart.sh web_service proxy_service db_service
+```  
 
 ## Known Issues
 Currently the script cannot accomodate services configured with "dynamic" IPs (the IP follows the @symbol in the service name).  A fix is planned for a future release.
