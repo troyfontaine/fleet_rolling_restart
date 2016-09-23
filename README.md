@@ -1,10 +1,10 @@
 # fleet_rolling_restart Script  
-A bash script using fleetctl to restart service units  
+A bash script using fleetctl to restart service units.  Based off the work by Rob Tuley found [here](http://engineering.rainchasers.com/coreos/fleet/2015/03/03/rolling-unit-restart.html).
 
 ## Software Pre-requisites  
 
-* fleetctl  
-* BASH 3.2 (macOS Minimum)  
+* Fleetctl (package available)   
+* BASH 3.2 (Pre-installed with many distributions of Linux and macOS)  
 
 ### Fleetctl  
 
@@ -26,4 +26,7 @@ A recent version of go (1.4 or higher) is required, so if your distribution's pa
 To install fleetctl, the tutorial [here](https://leoengine.org/fleetctl-on-ubuntudebian-system/) should give you all you need.
 
 ## Usage
-Coming soon.
+Coming soon  
+
+## Known Issues
+Currently the script cannot accomodate services configured with "dynamic" IPs (the IP follows the @symbol in the service name).  A fix is planned for a future release.
