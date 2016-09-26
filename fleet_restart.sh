@@ -3,7 +3,7 @@
 # By Troy Fontaine with rolling restart script from http://engineering.rainchasers.com/coreos/fleet/2015/03/03/rolling-unit-restart.html
 
 # Grab list of services from fleet
-container_array=($(fleetctl list-units -fields=unit -no-legend | cut -f2 ))
+container_array=($(fleetctl list-units --fields unit --no-legend | cut -f2 ))
 
 # Declare variables
 container=""
