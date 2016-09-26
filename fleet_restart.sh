@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Script to use Fleetctl to stop and start containers using a rolling restart
 # By Troy Fontaine with rolling restart script from http://engineering.rainchasers.com/coreos/fleet/2015/03/03/rolling-unit-restart.html
 
@@ -24,12 +24,10 @@ do
                 # Lob off the last 10 characters
                 # This removes the @#.service from the name
                 clean_container+=("${entry%??????????}")
-                echo $clean_container
         else
 		# Lob off last 8 characters
 		# This removes the .service from the name
                 clean_container+=${entry%????????}
-                echo $clean_container
         fi
 
 
